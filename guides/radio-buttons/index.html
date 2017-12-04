@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+    <meta name="author" content="Calum Marshall" />
+    <title>SplashKit UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      .github_link:hover
+      {
+        color: white;
+      }
+      .w3-code
+      {
+        border-left-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="min-height: 94vh;">
+      <div class="row jumbotron text-center w3-indigo" style="margin: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <h1>SplashKit UI</h1>
+        <h4>A SplashKit Library</h4>
+      </div>
+      <nav class="navbar navbar-inverse" style="border-radius: 0; background-color: #12469b; border-color: #12469b; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="../../documentation"><span class="glyphicon glyphicon-file"></span> Documentation</a></li>
+              <li><a href="../../examples"><span class="glyphicon glyphicon-cog"></span> Examples</a></li>
+              <li><a href="../../guides" style="color: white;"><span class="glyphicon glyphicon-book"></span> Guides</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br />
+      <div class="w3-container col-sm-10 col-sm-offset-1">
+        <h2>Radio Buttons</h2>
+        <p>
+          Before you begin, make sure your directory has been setup as described in the <a href="../installation">installation guide</a>.<br />
+          <br />
+          In this guide we will create a radio button group. The program will ask a user to select their favourite sport from a list of radio buttons.<br />
+          To get started let's create the input_font and the input_circle_area for each radio button and also the list of radio buttons for the radio button group.<br />
+          <div class="w3-code notranslate">
+            <span>input_font program_font = new_input_font(<span style="color: firebrick;">"Calibri"</span>, <span style="color: lightseagreen;">30</span>, COLOR_BLACK);</span><br />
+            <br />
+            <span>input_circle_area radio_1_area = new_input_circle_area(<span style="color: lightseagreen;">40</span>, <span style="color: lightseagreen;">80</span>, <span style="color: lightseagreen;">8</span>);</span><br />
+            <span>input_circle_area radio_2_area = new_input_circle_area(<span style="color: lightseagreen;">40</span>, <span style="color: lightseagreen;">110</span>, <span style="color: lightseagreen;">8</span>);</span><br />
+            <span>input_circle_area radio_3_area = new_input_circle_area(<span style="color: lightseagreen;">40</span>, <span style="color: lightseagreen;">140</span>, <span style="color: lightseagreen;">8</span>);</span><br />
+            <span>input_circle_area radio_4_area = new_input_circle_area(<span style="color: lightseagreen;">40</span>, <span style="color: lightseagreen;">170</span>, <span style="color: lightseagreen;">8</span>);</span><br />
+            <br />
+            <span>vector&lt;radio&gt; radio_buttons_to_add;</span><br />
+          </div>
+          After creating the above artefacts, we can create the actual radio buttons and insert them into a radio button group as follows.<br />
+          <div class="w3-code notranslate">
+            <span>radio radio_1 = new_radio(<span style="color: firebrick;">"radio_1"</span>, <span style="color: firebrick;">"AFL"</span>, radio_1_area, program_font);</span><br />
+            <span>radio_buttons_to_add.push_back(radio_1);</span><br />
+            <span>radio radio_2 = new_radio(<span style="color: firebrick;">"radio_2"</span>, <span style="color: firebrick;">"Cricket"</span>, radio_2_area, program_font);</span><br />
+            <span>radio_buttons_to_add.push_back(radio_2);</span><br />
+            <span>radio radio_3 = new_radio(<span style="color: firebrick;">"radio_3"</span>, <span style="color: firebrick;">"Soccer"</span>, radio_3_area, program_font);</span><br />
+            <span>radio_buttons_to_add.push_back(radio_3);</span><br />
+            <span>radio radio_4 = new_radio(<span style="color: firebrick;">"radio_4"</span>, <span style="color: firebrick;">"Tennis"</span>, radio_4_area, program_font);</span><br />
+            <span>radio_buttons_to_add.push_back(radio_4);</span><br />
+            <br />
+            <span>radio_group radio_group_1 = new_radio_group(<span style="color: firebrick;">"radio_group_1"</span>, radio_buttons_to_add);</span><br />
+          </div>
+          Now that we have our radio button group with our buttons created we have to draw and update the group as follows.
+          <div class="w3-code notranslate">
+            <span><span style="color: mediumblue">while</span> (!quit_requested())</span><br />
+            <span>{</span><br />
+            <span>&nbsp;&nbsp;process_events();</span><br />
+            <span>&nbsp;&nbsp;clear_screen(COLOR_WHITE);</span><br />
+            <span>&nbsp;&nbsp;draw_text(<span style="color: firebrick;">"Which is your most favourite sport?"</span>, COLOR_BLACK, <span style="color: firebrick;">"Calibri"</span>, <span style="color: lightseagreen;">45</span>, <span style="color: lightseagreen;">20</span>, <span style="color: lightseagreen;">20</span>);</span><br />
+            <span>&nbsp;&nbsp;draw_radio_group(radio_group_1);</span><br />
+            <span>&nbsp;&nbsp;update_radio_group(radio_group_1);</span><br />
+            <span>&nbsp;&nbsp;refresh_screen();</span><br />
+            <span>}</span>
+          </div>
+          You now have four fully functional radio buttons (as long as you followed the guide correctly).<br />
+          You can access the selected value of a radio button group with <em>string get_value_from_radio_group(radio_group group_to_check);</em><br />
+          <br />
+          <a href="program.cpp" download>Download the example radio buttons program.</a><br />
+          <br />
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-12 w3-indigo" style="height: 6vh; padding-top: 2vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+      <a href="https://github.com/calum-marshall/SplashKit-UI" class="github_link">GitHub Repository</a>
+    </div>
+  </body>
+</html>

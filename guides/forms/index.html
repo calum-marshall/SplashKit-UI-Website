@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+    <meta name="author" content="Calum Marshall" />
+    <title>SplashKit UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      .github_link:hover
+      {
+        color: white;
+      }
+      .w3-code
+      {
+        border-left-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="min-height: 94vh;">
+      <div class="row jumbotron text-center w3-indigo" style="margin: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <h1>SplashKit UI</h1>
+        <h4>A SplashKit Library</h4>
+      </div>
+      <nav class="navbar navbar-inverse" style="border-radius: 0; background-color: #12469b; border-color: #12469b; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="../../documentation"><span class="glyphicon glyphicon-file"></span> Documentation</a></li>
+              <li><a href="../../examples"><span class="glyphicon glyphicon-cog"></span> Examples</a></li>
+              <li><a href="../../guides" style="color: white;"><span class="glyphicon glyphicon-book"></span> Guides</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br />
+      <div class="w3-container col-sm-10 col-sm-offset-1">
+        <h2>Forms</h2>
+        <p>
+          Before you begin, make sure your directory has been setup as described in the <a href="../installation">installation guide</a>.<br />
+          <br />
+          In this guide we will create a form. A form is essentially a container of buttons, checkboxes, radio button groups and textboxes.<br />
+          This guide is based off the <a href="../../examples/guess-that-number">Guess That Number example</a>.<br />
+          To get started let's create the textbox and button.<br />
+          <div class="w3-code notranslate">
+            <span>input_area guess_area = new_input_area(<span style="color: lightseagreen;">100</span>, <span style="color: lightseagreen;">70</span>, <span style="color: lightseagreen;">400</span>, <span style="color: lightseagreen;">40</span>);</span><br />
+            <span>input_font guess_style = new_input_font(<span style="color: firebrick;">"Alice"</span>, <span style="color: lightseagreen;">25</span>);</span><br />
+            <span>textbox_text guess_text = new_textbox_text(<span style="color: lightseagreen;">2</span>, <span style="color: firebrick;">"Enter a guess"</span>, guess_style, <span style="color: mediumblue;">true</span>, CENTER_ALIGNED);</span><br />
+            <span>textbox guess_textbox = new_textbox(<span style="color: firebrick;">"guess_textbox"</span>, guess_area, guess_text);</span><br />
+            <br />
+            <span>input_area button_area = new_input_area(<span style="color: lightseagreen;">200</span>, <span style="color: lightseagreen;">140</span>, <span style="color: lightseagreen;">200</span>, <span style="color: lightseagreen;">40</span>);</span><br />
+            <span>input_border button_border = new_input_border(<span style="color: lightseagreen;">2</span>);</span><br />
+            <span>button btn = new_button(<span style="color: firebrick;">"submit_button"</span>, <span style="color: firebrick;">"Guess"</span>, button_area, guess_style, button_border, SUBMIT);</span><br />
+          </div>
+          After creating the above artefacts, we can create the form and add the textbox and button to it.<br />
+          <div class="w3-code notranslate">
+            <span>form frm = new_form();</span><br />
+            <span>frm.textboxes.push_back(guess_textbox);</span><br />
+            <span>frm.buttons.push_back(btn);</span><br />
+          </div>
+          Now that we have our form created we have to draw and update it as follows.<br />
+          The nice thing about forms is we don't have to draw and update everything in it, just the form itself.<br />
+          <div class="w3-code notranslate">
+            <span><span style="color: mediumblue">while</span> (!quit_requested())</span><br />
+            <span>{</span><br />
+            <span>&nbsp;&nbsp;process_events();</span><br />
+            <span>&nbsp;&nbsp;clear_screen(COLOR_WHITE);</span><br />
+            <span>&nbsp;&nbsp;draw_text(<span style="color: firebrick;">"Guess The Number!"</span>, COLOR_BLACK, <span style="color: firebrick;">"Calibri"</span>, <span style="color: lightseagreen;">45</span>, <span style="color: lightseagreen;">150</span>, <span style="color: lightseagreen;">20</span>);</span><br />
+            <span>&nbsp;&nbsp;draw_form(frm);</span><br />
+            <span>&nbsp;&nbsp;update_form(frm);</span><br />
+            <span>&nbsp;&nbsp;refresh_screen();</span><br />
+            <span>}</span>
+          </div>
+          You now know how to create, draw and update forms.<br />
+          To learn how to do more with forms take a look at the <a href="../../examples/guess-that-number">Guess That Number</a> source code.<br />
+          <br />
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-12 w3-indigo" style="height: 6vh; padding-top: 2vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+      <a href="https://github.com/calum-marshall/SplashKit-UI" class="github_link">GitHub Repository</a>
+    </div>
+  </body>
+</html>

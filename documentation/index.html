@@ -1,0 +1,4072 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8" />
+    <meta name="author" content="Calum Marshall" />
+    <title>SplashKit UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      .github_link:hover
+      {
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="overflow-y: hidden;">
+    <div style="min-height: 94vh;">
+      <div class="row jumbotron text-center w3-indigo" style="margin: 0; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <h1>SplashKit UI</h1>
+        <h4>A SplashKit Library</h4>
+      </div>
+      <nav class="navbar navbar-inverse" style="border-radius: 0; background-color: #12469b; border-color: #12469b; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="../documentation" style="color: white;"><span class="glyphicon glyphicon-file"></span> Documentation</a></li>
+              <li><a href="../examples"><span class="glyphicon glyphicon-cog"></span> Examples</a></li>
+              <li><a href="../guides"><span class="glyphicon glyphicon-book"></span> Guides</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br />
+      <div class="col-sm-3 col-sm-push-9 w3-margin-top w3-margin-bottom">
+        <h3><strong>Functions</strong></h3>
+        <ul style="list-style-type: none; margin-left: 5px; padding: 0;">
+          <li><a href="#new_input_area">New Input Area</a></li>
+          <li><a href="#new_input_circle_area">New Input Circle Area</a></li>
+          <li><a href="#new_input_font">New Input Font</a></li>
+          <li><a href="#new_input_border">New Input Border</a></li>
+          <li><a href="#new_textbox_text">New Textbox Text</a></li>
+          <li><a href="#new_textbox">New Textbox</a></li>
+          <li><a href="#draw_textbox">Draw Textbox</a></li>
+          <li><a href="#update_textbox">Update Textbox</a></li>
+          <li><a href="clear_textbox">Clear Textbox</a></li>
+          <li><a href="#new_checkbox">New Checkbox</a></li>
+          <li><a href="#draw_checkbox">Draw Checkbox</a></li>
+          <li><a href="#update_checkbox">Update Checkbox</a></li>
+          <li><a href="#clear_checkbox">Clear Checkbox</a></li>
+          <li><a href="#new_radio">New Radio</a></li>
+          <li><a href="#draw_radio">Draw Radio</a></li>
+          <li><a href="#radio_clicked">Radio Clicked</a></li>
+          <li><a href="#new_radio_group">New Radio Group</a></li>
+          <li><a href="#draw_radio_group">Draw Radio Group</a></li>
+          <li><a href="#update_radio_group">Update Radio Group</a></li>
+          <li><a href="#clear_radio_group">Clear Radio Group</a></li>
+          <li><a href="#new_button">New Button</a></li>
+          <li><a href="#draw_button">Draw Button</a></li>
+          <li><a href="#button_clicked">Button Clicked</a></li>
+          <li><a href="#new_form">New Form</a></li>
+          <li><a href="#draw_form">Draw Form</a></li>
+          <li><a href="#update_form">Update Form</a></li>
+          <li><a href="#clear_form">Clear Form</a></li>
+          <li><a href="#get_textbox_from_form">Get Textbox From Form</a></li>
+          <li><a href="#get_checkbox_from_form">Get Checkbox From Form</a></li>
+          <li><a href="#get_radio_group_from_form">Get Radio Group From Form</a></li>
+          <li><a href="#get_radio_from_group">Get Radio From Group</a></li>
+          <li><a href="#get_button_from_form">Get Button From Form</a></li>
+          <li><a href="#get_value_from_radio_group">Get Value From Radio Group</a></li>
+        </ul>
+        <h3><strong>Types</strong></h3>
+        <ul style="list-style-type: none; margin-left: 5px; padding: 0;">
+          <li><a href="#input_area">Input Area</a></li>
+          <li><a href="#input_circle_area">Input Circle Area</a></li>
+          <li><a href="#input_font">Input Font</a></li>
+          <li><a href="#input_border">Input Border</a></li>
+          <li><a href="#textbox_text">Textbox Text</a></li>
+          <li><a href="#textbox">Textbox</a></li>
+          <li><a href="#checkbox">Checkbox</a></li>
+          <li><a href="#radio">Radio</a></li>
+          <li><a href="#radio_group">Radio Group</a></li>
+          <li><a href="#button">Button</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#form_action">Form Action</a></li>
+          <li><a href="#text_alignment">Text Alignment</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-7 col-sm-offset-2 col-sm-pull-3 w3-margin-top w3-margin-bottom">
+        <a id="new_input_area"></a><h3>New Input Area</h3>
+        <p>Creates a new rectangular area on the window where a button, checkbox or textbox can be drawn to.</p>
+        <dl>
+          <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_area"><code>input_area</code></a></p>
+          <dt style="font-weight: normal; color: grey;">Parameters</dt>
+          <dd>
+            <table class="table" style="margin-top: 0.5vh;">
+              <tr>
+                <td><strong>Name</strong></td>
+                <td><strong>Type</strong></td>
+                <td><strong>Description</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Position X</strong></td>
+                <td><code>double</code></td>
+                <td>The x coordinate of the top left corner.</td>
+              </tr>
+              <tr>
+                <td><strong>Position Y</strong></td>
+                <td><code>double</code></td>
+                <td>The y coordinate of the top left corner.</td>
+              </tr>
+              <tr>
+                <td><strong>Width</strong></td>
+                <td><code>double</code></td>
+                <td>The width of the area.</td>
+              </tr>
+              <tr>
+                <td><strong>Height</strong></td>
+                <td><code>double</code></td>
+                <td>The height of the area.</td>
+              </tr>
+            </table>
+          </dd>
+          <dt style="font-weight: normal; color: grey;">Signatures</dt>
+          <dd>
+            <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+              <tr>input_area&nbsp; new_input_area(<span style="color: mediumblue;">double</span>&nbsp; position_x,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; position_y,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; width,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; height);</tr>
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="col-sm-7 col-sm-offset-2 col-sm-pull-3 w3-margin-top w3-margin-bottom">
+        <h3>New Input Area</h3>
+        <p>Creates a new rectangular area on the window where a button, checkbox or textbox can be drawn to.</p>
+        <dl>
+          <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_area"><code>input_area</code></a></p>
+          <dt style="font-weight: normal; color: grey;">Parameters</dt>
+          <dd>
+            <table class="table" style="margin-top: 0.5vh;">
+              <tr>
+                <td><strong>Name</strong></td>
+                <td><strong>Type</strong></td>
+                <td><strong>Description</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Point</strong></td>
+                <td><code>point_2d</code></td>
+                <td>The point of the top left corner.</td>
+              </tr>
+              <tr>
+                <td><strong>Width</strong></td>
+                <td><code>double</code></td>
+                <td>The width of the area.</td>
+              </tr>
+              <tr>
+                <td><strong>Height</strong></td>
+                <td><code>double</code></td>
+                <td>The height of the area.</td>
+              </tr>
+            </table>
+          </dd>
+          <dt style="font-weight: normal; color: grey;">Signatures</dt>
+          <dd>
+            <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+              <tr>input_area&nbsp; new_input_area(point_2d&nbsp; point,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; width,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; height);</tr>
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 col-sm-pull-3 w3-margin-top w3-margin-bottom">
+      <h3>New Input Area</h3>
+      <p>Creates a new rectangular area on the window where a button, checkbox or textbox can be drawn to.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_area"><code>input_area</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Position X</strong></td>
+              <td><code>double</code></td>
+              <td>The x coordinate of the top left corner.</td>
+            </tr>
+            <tr>
+              <td><strong>Position Y</strong></td>
+              <td><code>double</code></td>
+              <td>The y coordinate of the top left corner.</td>
+            </tr>
+            <tr>
+              <td><strong>Point</strong></td>
+              <td><code>point_2d</code></td>
+              <td>The point of the bottom right corner.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_area&nbsp; new_input_area(<span style="color: mediumblue;">double</span>&nbsp; position_x,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; position_y,&nbsp; point_2d&nbsp; point);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Area</h3>
+      <p>Creates a new rectangular area on the window where a button, checkbox or textbox can be drawn to.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_area"><code>input_area</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Point</strong></td>
+              <td><code>point_2d</code></td>
+              <td>The point of the top left corner.</td>
+            </tr>
+            <tr>
+              <td><strong>Point</strong></td>
+              <td><code>point_2d</code></td>
+              <td>The point of the bottom right corner.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_area&nbsp; new_input_area(point_2d&nbsp; point,&nbsp; point_2d&nbsp; point_2);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_input_circle_area"></a><h3>New Input Circle Area</h3>
+      <p>Creates a new circular area on the window where a radio button can be drawn to.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_circle_area"><code>input_circle_area</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Position X</strong></td>
+              <td><code>double</code></td>
+              <td>The x coordinate at the center of the area.</td>
+            </tr>
+            <tr>
+              <td><strong>Position Y</strong></td>
+              <td><code>double</code></td>
+              <td>The y coordinate at the center of the area.</td>
+            </tr>
+            <tr>
+              <td><strong>Radius</strong></td>
+              <td><code>double</code></td>
+              <td>The radius of the area.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_circle_area&nbsp; new_input_circle_area(<span style="color: mediumblue;">double</span>&nbsp; position_x,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; position_y,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; radius);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Circle Area</h3>
+      <p>Creates a new circular area on the window where a radio button can be drawn to.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_circle_area"><code>input_circle_area</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Point</strong></td>
+              <td><code>point_2d</code></td>
+              <td>The point at the center of the area.</td>
+            </tr>
+            <tr>
+              <td><strong>Radius</strong></td>
+              <td><code>double</code></td>
+              <td>The radius of the area.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_circle_area&nbsp; new_input_circle_area(point_2d&nbsp; point,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; radius);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_input_font"></a><h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Size</strong></td>
+              <td><code>double</code></td>
+              <td>The size of the font.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the font.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(string&nbsp; font_name,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; font_size,&nbsp; color&nbsp; font_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the font.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(string&nbsp; font_name,&nbsp; color&nbsp; font_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Size</strong></td>
+              <td><code>double</code></td>
+              <td>The size of the font.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(string&nbsp; font_name,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; font_size);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(string&nbsp; font_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>font</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Size</strong></td>
+              <td><code>double</code></td>
+              <td>The size of the font.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the font.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(font&nbsp; font_name,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; font_size,&nbsp; color&nbsp; font_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>font</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the font.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(font&nbsp; font_name,&nbsp; color&nbsp; font_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>font</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+            <tr>
+              <td><strong>Font Size</strong></td>
+              <td><code>double</code></td>
+              <td>The size of the font.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(font&nbsp; font_name,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; font_size);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Font</h3>
+      <p>Creates a font that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_font"><code>input_font</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Font Name</strong></td>
+              <td><code>font</code></td>
+              <td>The name of the font to use.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_font&nbsp; new_input_font(font&nbsp; font_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_input_border"></a><h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Border Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the border.</td>
+            </tr>
+            <tr>
+              <td><strong>Border Width</strong></td>
+              <td><code>double</code></td>
+              <td>The width of the border.</td>
+            </tr>
+            <tr>
+              <td><strong>Border Selected Colour</strong></td>
+              <td><code>color</code></td>
+              <td>The selected color of the checkbox, radio button or textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border(color&nbsp; border_color,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; border_width,&nbsp; color&nbsp; border_selected_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Border Width</strong></td>
+              <td><code>double</code></td>
+              <td>The width of the border.</td>
+            </tr>
+            <tr>
+              <td><strong>Border Selected Colour</strong></td>
+              <td><code>color</code></td>
+              <td>The selected color of the checkbox, radio button or textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border(<span style="color: mediumblue;">double</span>&nbsp; border_width,&nbsp; color&nbsp; border_selected_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Border Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the border.</td>
+            </tr>
+            <tr>
+              <td><strong>Border Selected Colour</strong></td>
+              <td><code>color</code></td>
+              <td>The selected color of the checkbox, radio button or textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border(color&nbsp; border_color,&nbsp; color&nbsp; border_selected_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Border Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the border.</td>
+            </tr>
+            <tr>
+              <td><strong>Border Width</strong></td>
+              <td><code>double</code></td>
+              <td>The width of the border.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border(color&nbsp; border_color,&nbsp; <span style="color: mediumblue;">double</span>&nbsp; border_width);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Border Color</strong></td>
+              <td><code>color</code></td>
+              <td>The color of the border.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border(color&nbsp; border_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Border Width</strong></td>
+              <td><code>double</code></td>
+              <td>The width of the border.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border(<span style="color: mediumblue;">double</span>&nbsp; border_width);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Input Border</h3>
+      <p>Creates a border that is able to be used by a button, checkbox, radio button or textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#input_border"><code>input_border</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>input_border&nbsp; new_input_border();</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_textbox_text"></a><h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(input_font&nbsp; attributes);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(input_font&nbsp; attributes,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Max Length</strong></td>
+              <td><code>int</code></td>
+              <td>The maximum number of characters the value can have.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(<span style="color: mediumblue;">int</span>&nbsp; max_length,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Value</strong></td>
+              <td><code>string</code></td>
+              <td>The value of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; value,&nbsp; string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Placeholder</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed when the textbox is empty.</td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(string&nbsp; placeholder,&nbsp; input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox Text</h3>
+      <p>Creates the text properties for a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox_text"><code>textbox_text</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Attributes</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Numbers Only</strong></td>
+              <td><code>bool</code></td>
+              <td>If the user can only input numbers.</td>
+            </tr>
+            <tr>
+              <td><strong>Alignment</strong></td>
+              <td><code><a href="#text_alignment">text_alignment</a></code></td>
+              <td>The alignment of the text.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox_text&nbsp; new_textbox_text(input_font&nbsp; attributes,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; numbers_only,&nbsp; text_alignment&nbsp; alignment);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_textbox"></a><h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Selected</strong></td>
+              <td><code>bool</code></td>
+              <td>If the textbox is currently selected.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; selected);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Selected</strong></td>
+              <td><code>bool</code></td>
+              <td>If the textbox is currently selected.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; input_border&nbsp; border,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; selected);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; input_border&nbsp; border);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Selected</strong></td>
+              <td><code>bool</code></td>
+              <td>If the textbox is currently selected.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; color&nbsp; background_color,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; selected);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Selected</strong></td>
+              <td><code>bool</code></td>
+              <td>If the textbox is currently selected.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; selected);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Textbox</h3>
+      <p>Creates a textbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The for the textbox to draw to.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code><a href="#textbox_text">textbox_text</a></code></td>
+              <td>The text properties for the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; new_textbox(string&nbsp; name,&nbsp; input_area&nbsp; area,&nbsp; textbox_text&nbsp; text);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="draw_textbox"></a><h3>Draw Textbox</h3>
+      <p>Draws a textbox.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Textbox To Draw</strong></td>
+              <td><code><a href="#textbox">textbox</a></code></td>
+              <td>The textbox to be drawn.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; draw_textbox(textbox&nbsp; textbox_to_draw);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="update_textbox"></a><h3>Update Textbox</h3>
+      <p>Updates a textbox.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Textbox To Update</strong></td>
+              <td><code><a href="#textbox">textbox</a></code></td>
+              <td>The textbox to be updated.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; update_textbox(textbox&nbsp; <strong>&amp;</strong>textbox_to_update);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="clear_textbox"></a><h3>Clear Textbox</h3>
+      <p>Clears the value of a textbox.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Textbox To Clear</strong></td>
+              <td><code><a href="#textbox">textbox</a></code></td>
+              <td>The textbox to be cleared.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; clear_textbox(textbox&nbsp; <strong>&amp;</strong>textbox_to_clear);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_checkbox"></a><h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Checked</strong></td>
+              <td><code>bool</code></td>
+              <td>If the checkbox is checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; checked);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the checkbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Checked</strong></td>
+              <td><code>bool</code></td>
+              <td>If the checkbox is checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; color&nbsp; background_color,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; checked);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Checked</strong></td>
+              <td><code>bool</code></td>
+              <td>If the checkbox is checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; checked);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the checkbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the checkbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Checked</strong></td>
+              <td><code>bool</code></td>
+              <td>If the checkbox is checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; checked);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Checkbox</h3>
+      <p>Creates a checkbox.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area of the checkbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties of the checkbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; new_checkbox(string name,&nbsp; string&nbsp; label,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="draw_checkbox"></a><h3>Draw Checkbox</h3>
+      <p>Draws a checkbox.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Checkbox To Draw</strong></td>
+              <td><code><a href="#checkbox">checkbox</a></code></td>
+              <td>The checkbox to be drawn.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; draw_checkbox(checkbox&nbsp; checkbox_to_draw);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="update_checkbox"></a><h3>Update Checkbox</h3>
+      <p>Updates a checkbox.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Checkbox To Update</strong></td>
+              <td><code><a href="#checkbox">checkbox</a></code></td>
+              <td>The checkbox to be updated.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; update_checkbox(checkbox&nbsp; <strong>&amp;</strong>checkbox_to_update);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="clear_checkbox"></a><h3>Clear Checkbox</h3>
+      <p>Makes the checkbox unchecked.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Checkbox To Clear</strong></td>
+              <td><code><a href="#checkbox">checkbox</a></code></td>
+              <td>The checkbox to be cleared.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; clear_checkbox(checkbox&nbsp; <strong>&amp;</strong>checkbox_to_clear);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_radio"></a><h3>New Radio</h3>
+      <p>Creates a radio button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio"><code>radio</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_circle_area">input_circle_area</a></code></td>
+              <td>The area for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of radio button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio&nbsp; new_radio(string&nbsp; name,&nbsp; string&nbsp; label,&nbsp; input_circle_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Radio</h3>
+      <p>Creates a radio button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio"><code>radio</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_circle_area">input_circle_area</a></code></td>
+              <td>The area for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the radio button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio&nbsp; new_radio(string&nbsp; name,&nbsp; string&nbsp; label,&nbsp; input_circle_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Radio</h3>
+      <p>Creates a radio button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio"><code>radio</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_circle_area">input_circle_area</a></code></td>
+              <td>The area for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of radio button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio&nbsp; new_radio(string&nbsp; name,&nbsp; string&nbsp; label,&nbsp; input_circle_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Radio</h3>
+      <p>Creates a radio button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio"><code>radio</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Label</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be drawn alongside the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_circle_area">input_circle_area</a></code></td>
+              <td>The area for the radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the radio button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio&nbsp; new_radio(string&nbsp; name,&nbsp; string&nbsp; label,&nbsp; input_circle_area&nbsp; area,&nbsp; input_font&nbsp; style);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="draw_radio"></a><h3>Draw Radio</h3>
+      <p>Draws a radio button.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Radio To Draw</strong></td>
+              <td><code><a href="#radio">radio</a></code></td>
+              <td>The radio button to be drawn.</td>
+            </tr>
+            <tr>
+              <td><strong>Is Checked</strong></td>
+              <td><code>bool</code></td>
+              <td>If a checked radio button should be drawn.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; draw_radio(radio&nbsp; radio_to_draw,&nbsp; <span style="color: mediumblue;">bool</span>&nbsp; is_checked);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="radio_clicked"></a><h3>Radio Clicked</h3>
+      <p>Checks if a radio button has been clicked.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <code>bool</code></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Radio To Check</strong></td>
+              <td><code><a href="#radio">radio</a></code></td>
+              <td>The radio button to be checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">bool</span>&nbsp; radio_clicked(radio&nbsp; radio_to_check);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_radio_group"></a><h3>New Radio Group</h3>
+      <p>Creates a new radio group. Please note that the parameter &quot;radio_buttons&quot; must contain at least one radio button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio_group"><code>radio_group</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio group.</td>
+            </tr>
+            <tr>
+              <td><strong>Checked Radio</strong></td>
+              <td><code>int</code></td>
+              <td>The index of the checked radio button.</td>
+            </tr>
+            <tr>
+              <td><strong>Radio Buttons</strong></td>
+              <td><code>vector&lt;radio&gt;</code></td>
+              <td>The list of radio buttons in the group.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio_group&nbsp; new_radio_group(string&nbsp; name,&nbsp; <span style="color: mediumblue;">int</span>&nbsp; checked_radio,&nbsp; vector&lt;radio&gt;&nbsp; radio_buttons);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Radio Group</h3>
+      <p>Creates a new radio group. Please note that the parameter &quot;radio_buttons&quot; must contain at least one radio button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio_group"><code>radio_group</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio group.</td>
+            </tr>
+            <tr>
+              <td><strong>Radio Buttons</strong></td>
+              <td><code>vector&lt;radio&gt;</code></td>
+              <td>The list of radio buttons in the group.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio_group&nbsp; new_radio_group(string&nbsp; name,&nbsp; vector&lt;radio&gt;&nbsp; radio_buttons);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="draw_radio_group"></a><h3>Draw Radio Group</h3>
+      <p>Draws a radio group.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Group To Draw</strong></td>
+              <td><code><a href="#radio_group">radio_group</a></code></td>
+              <td>The radio group to be drawn.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; draw_radio_group(radio_group&nbsp; group_to_draw);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="update_radio_group"></a><h3>Update Radio Group</h3>
+      <p>Updates a radio group.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Group To Update</strong></td>
+              <td><code><a href="#radio_group">radio_group</a></code></td>
+              <td>The radio group to be updated.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; update_radio_group(radio_group&nbsp; <strong>&amp;</strong>group_to_update);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="clear_radio_group"></a><h3>Clear Radio Group</h3>
+      <p>Checks the first radio button in the group.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Group To Clear</strong></td>
+              <td><code><a href="#radio_group">radio_group</a></code></td>
+              <td>The radio group to be cleared.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; clear_radio_group(radio_group&nbsp; <strong>&amp;</strong>group_to_clear);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_button"></a><h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Action</strong></td>
+              <td><code><a href="#form_action">form_action</a></code></td>
+              <td>The action to preform to the form when clicked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color,&nbsp; form_action&nbsp; action);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Action</strong></td>
+              <td><code><a href="#form_action">form_action</a></code></td>
+              <td>The action to preform to the form when clicked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; color&nbsp; background_color,&nbsp; form_action&nbsp; action);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Action</strong></td>
+              <td><code><a href="#form_action">form_action</a></code></td>
+              <td>The action to preform to the form when clicked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; form_action&nbsp; action);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Action</strong></td>
+              <td><code><a href="#form_action">form_action</a></code></td>
+              <td>The action to preform to the form when clicked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; form_action&nbsp; action);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Background Color</strong></td>
+              <td><code>color</code></td>
+              <td>The inner color of the button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; color&nbsp; background_color);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <h3>New Button</h3>
+      <p>Creates a button.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Text</strong></td>
+              <td><code>string</code></td>
+              <td>The text to be displayed on the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Area</strong></td>
+              <td><code><a href="#input_area">input_area</a></code></td>
+              <td>The area for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Style</strong></td>
+              <td><code><a href="#input_font">input_font</a></code></td>
+              <td>The font properties for the button.</td>
+            </tr>
+            <tr>
+              <td><strong>Border</strong></td>
+              <td><code><a href="#input_border">input_border</a></code></td>
+              <td>The border of the button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; new_button(string&nbsp; name,&nbsp; string&nbsp; text,&nbsp; input_area&nbsp; area,&nbsp; input_font&nbsp; style,&nbsp; input_border&nbsp; border);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="draw_button"></a><h3>Draw Button</h3>
+      <p>Draws a button.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Button To Draw</strong></td>
+              <td><code><a href="#button">button</a></code></td>
+              <td>The button to be drawn.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; draw_button(button&nbsp; button_to_draw);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="button_clicked"></a><h3>Button Clicked</h3>
+      <p>Checks if a button has been clicked.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <code>bool</code></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Button To Check</strong></td>
+              <td><code><a href="#button">button</a></code></td>
+              <td>The button to be checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">bool</span>&nbsp; button_clicked(button&nbsp; button_to_check);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="new_form"></a><h3>New Form</h3>
+      <p>Creates a form.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#form"><code>form</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>form&nbsp; new_form();</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="draw_form"></a><h3>Draw Form</h3>
+      <p>Draws a form.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Draw</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be drawn.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; draw_form(form&nbsp; form_to_draw);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="update_form"></a><h3>Update Form</h3>
+      <p>Updates a form.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Update</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be updated.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; update_form(form&nbsp; <strong>&amp;</strong>form_to_update);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="clear_form"></a><h3>Clear Form</h3>
+      <p>Clears a form.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Clear</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be cleared.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr><span style="color: mediumblue;">void</span>&nbsp; clear_form(form&nbsp; <strong>&amp;</strong>form_to_clear);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="get_textbox_from_form"></a><h3>Get Textbox From Form</h3>
+      <p>Gets a textbox from a form.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#textbox"><code>textbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Search</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be searched.</td>
+            </tr>
+            <tr>
+              <td><strong>Textbox Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the textbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>textbox&nbsp; get_textbox_from_form(form&nbsp; form_to_search,&nbsp; string&nbsp; textbox_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="get_checkbox_from_form"></a><h3>Get Checkbox From Form</h3>
+      <p>Gets a checkbox from a form.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#checkbox"><code>checkbox</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Search</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be searched.</td>
+            </tr>
+            <tr>
+              <td><strong>Checkbox Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the checkbox.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>checkbox&nbsp; get_checkbox_from_form(form&nbsp; form_to_search,&nbsp; string&nbsp; checkbox_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="get_radio_group_from_form"></a><h3>Get Radio Group From Form</h3>
+      <p>Gets a radio group from a form.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio_group"><code>radio_group</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Search</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be searched.</td>
+            </tr>
+            <tr>
+              <td><strong>Radio Group Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio group.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio_group&nbsp; get_radio_group_from_form(form&nbsp; form_to_search,&nbsp; string&nbsp; radio_group_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="get_radio_from_group"></a><h3>Get Radio From Group</h3>
+      <p>Gets a radio button from a radio button group.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#radio"><code>radio</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Radio Group To Search</strong></td>
+              <td><code><a href="#radio_group">radio_group</a></code></td>
+              <td>The radio group to be searched.</td>
+            </tr>
+            <tr>
+              <td><strong>Radio Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the radio button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>radio&nbsp; get_radio_from_group(radio_group&nbsp; radio_group_to_search,&nbsp; string&nbsp; radio_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="get_button_from_form"></a><h3>Get Button From Form</h3>
+      <p>Gets a button from a form.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <a href="#button"><code>button</code></a></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Form To Search</strong></td>
+              <td><code><a href="#form">form</a></code></td>
+              <td>The form to be searched.</td>
+            </tr>
+            <tr>
+              <td><strong>Button Name</strong></td>
+              <td><code>string</code></td>
+              <td>The name of the button.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>button&nbsp; get_button_from_form(form&nbsp; form_to_search,&nbsp; string&nbsp; button_name);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="get_value_from_radio_group"></a><h3>Get Value From Radio Group</h3>
+      <p>Gets the checked value from a radio group.</p>
+      <dl>
+        <p><span style="font-weight: normal; color: grey;">Returns</span>&nbsp; <code>string</code></p>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Type</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Group To Check</strong></td>
+              <td><code><a href="#radio_group">radio_group</a></code></td>
+              <td>The radio group to be checked.</td>
+            </tr>
+          </table>
+        </dd>
+        <dt style="font-weight: normal; color: grey;">Signatures</dt>
+        <dd>
+          <div style="background-color: #efefef; padding: 1vh; border-radius: 0.5vh; margin-top: 0.5vh;">
+            <tr>string&nbsp; get_value_from_radio_group(radio_group&nbsp; group_to_check);</tr>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="input_area"></a><h3>Input Area</h3>
+      <p>Defines a rectangular area in the window. Input areas are used for creating buttons, checkboxes and textboxes.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="input_circle_area"></a><h3>Input Circle Area</h3>
+      <p>Defines a circular area in the window. Input circle areas are used for creating radio buttons.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="input_font"></a><h3>Input Font</h3>
+      <p>Input fonts define a set of font properties for buttons, checkboxes, textboxes and radio buttons.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="input_border"></a><h3>Input Border</h3>
+      <p>Input borders define the color, width and selected color of inputs. The selected color field is used as the the checked color for checkboxes and radio buttons. For buttons, the selected color has no effect.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="textbox_text"></a><h3>Textbox Text</h3>
+      <p>Defines all of the properties for the text to be displayed in a textbox.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="textbox"></a><h3>Textbox</h3>
+      <p>Textboxes are rectangles that that store a string.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="checkbox"></a><h3>Checkbox</h3>
+      <p>Checkboxes are small rectangular boxes that store a boolean value.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="radio"></a><h3>Radio</h3>
+      <p>Radio buttons are circular buttons that store a boolean value, only one in a radio group can be true however.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="radio_group"></a><h3>Radio Group</h3>
+      <p>Radio groups are a list of radio buttons. Each group can only have one radio button that is checked.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="button"></a><h3>Button</h3>
+      <p>Primarily used for forms, a button allows for form actions to be run through a screen click.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="form"></a><h3>Form</h3>
+      <p>Contains a lists of buttons, checkboxes, textboxes and radio button groups. Very useful for updating, drawing and clearing multiple buttons, checkboxes, textboxes and radio button groups at once.</p>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="form_action"></a><h3>Form Action</h3>
+      <p>Defines the supported form actions by SplashKit UI.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>CLEAR</strong></td>
+              <td>Clears the form.</td>
+            </tr>
+            <tr>
+              <td><strong>NONE</strong></td>
+              <td>Just looks pretty.</td>
+            </tr>
+            <tr>
+              <td><strong>SUBMIT</strong></td>
+              <td>Submits the form.</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-sm-7 col-sm-offset-2 w3-margin-top w3-margin-bottom">
+      <a id="text_alignment"></a><h3>Text Alignment</h3>
+      <p>Defines the alignment of text in textboxes.</p>
+      <dl>
+        <dt style="font-weight: normal; color: grey;">Parameters</dt>
+        <dd>
+          <table class="table" style="margin-top: 0.5vh;">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+              <td><strong>LEFT_ALIGNED</strong></td>
+              <td>Aligns the text to the left.</td>
+            </tr>
+            <tr>
+              <td><strong>CENTER_ALIGNED</strong></td>
+              <td>Aligns the text to the center.</td>
+            </tr>
+            <tr>
+              <td><strong>RIGHT_ALIGNED</strong></td>
+              <td>Aligns the text to the right.</td>
+            </tr>
+          </table>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  </div>
+    <div class="col-sm-12 w3-indigo" style="height: 6vh; padding-top: 2vh; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+      <a href="https://github.com/calum-marshall/SplashKit-UI" class="github_link">GitHub Repository</a>
+    </div>
+  </body>
+</html>
